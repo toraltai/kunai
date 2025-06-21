@@ -1,23 +1,23 @@
-[project]
+[tool.poetry]
 name = "kunai"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "toraltai",email = "flangkg@gmail.com"}
-]
-packages = [{ include = "kunai_users" }]
-license = {text = "MIT"}
-requires-python = "3.10.12"
-dependencies = [
-    "fastapi (>=0.115.13,<0.116.0)",
-    "uvicorn (>=0.34.3,<0.35.0)",
-    "tortoise-orm (>=0.25.1,<0.26.0)"
+authors = ["toraltai <flangkg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  { include = "kunai_users" }
 ]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = "^3.10.12"
+fastapi = ">=0.115.13,<0.116.0"
+uvicorn = ">=0.34.3,<0.35.0"
+tortoise-orm = ">=0.25.1,<0.26.0"
 
 [tool.poetry.scripts]
-users = "kunai_users.main:main"
+users = "kunai_users.main:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
