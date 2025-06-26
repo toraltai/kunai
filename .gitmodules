@@ -1,3 +1,6 @@
 [submodule "kunai_products"]
 	path = kunai_products
 	url = git@github.com:toraltai/kunai_products.git
+[submodule "kunai_users"]
+	path = kunai_users
+	url = git@github.com:toraltai/kunai_users.git
